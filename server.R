@@ -43,7 +43,7 @@ wrapfunnel <- function(datapath,
   ) 
 }
 
-# Define server logic required to draw a histogram
+# Define server logic required to draw funnel plot
 server <- shinyServer(function(input, output, session) {
   # Expression that generates a funnel. The expression is
   # wrapped in a call to renderPlot to indicate that:
