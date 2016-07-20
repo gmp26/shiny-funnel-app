@@ -3,7 +3,7 @@ source(file="funnel4.R")
 
 # x<-read.csv(file="CABG-hospitals-03.csv",header=T,sep=",")
 
-funnel <- function(datapath,
+wrapfunnel <- function(datapath,
                    title="NY Cardiac Surgery", #change when adjusted
                    plot="funnel",
                    xlabel="Number of operations per hospital", #change when adjusted
@@ -80,7 +80,7 @@ server <- shinyServer(function(input, output, session) {
       updateNumericInput(session, "tail.high", value = tail.high)
     }
     
-    funnel(datapath=upload$datapath,
+    wrapfunnel(datapath=upload$datapath,
            title=title,
            xlabel=input$xlabel,
            ylabel=ylabel,
