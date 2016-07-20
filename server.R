@@ -1,8 +1,6 @@
 library("shiny")
 source(file="funnel4.R")
 
-# x<-read.csv(file="CABG-hospitals-03.csv",header=T,sep=",")
-
 wrapfunnel <- function(datapath,
                    title="NY Cardiac Surgery", #change when adjusted
                    plot="funnel",
@@ -15,26 +13,17 @@ wrapfunnel <- function(datapath,
                    plot.target=F,
                    ypercent=T,
                    tails=c(0.001,0.025)) {
-  #browser()
+  
+  # todo: add some error handling here
   x <- read.csv(datapath,sep=",")
   N<- x$Cases
   R<- N-x$Deaths
   P = N -x$EMR*N/100
-  #xlabel<-"Number of operations per hospital"
-  #xlabel<-"Number of operations per hospital (adjusted)"
   xrange<-c(0,max(N))
-  # ylabel<-"Mortality rate (%)"
-  #yrange<-c(0,max( R/N ))
   yrange<-c(min(R/N )-0.01, 1)
-  #yrange=c(0,1)
   names= as.character(x$Hospital)
-  #tails=c(0.001,0.025)
-  
+
   # test using slices
-  
-  # 1.  not risk-adjusted
-  #title<-"NY Cardiac Surgery - not risk-adjusted"
-  #ylabel<-"Survival rate (%)"
   funnel4(obs.prop=R/N,  denom=N, pred.prop=P/N, names=names,
           plot=plot, rank=rank, riskadj=riskadj, RASRplot=RASRplot,
           mean.target=mean.target, plot.target=plot.target, title=title,xrange=xrange,
@@ -81,17 +70,17 @@ server <- shinyServer(function(input, output, session) {
     }
     
     wrapfunnel(datapath=upload$datapath,
-           title=title,
-           xlabel=input$xlabel,
-           ylabel=ylabel,
-           plot=plot,
-           rank=input$rank,
-           riskadj = riskadj,
-           RASRplot = input$RASRplot,
-           mean.target = input$mean.target,
-           plot.target = input$plot.target,
-           ypercent = ypercent,
-           tails = c(tail.low, tail.high)
+               title=title,
+               xlabel=input$xlabel,
+               ylabel=ylabel,
+               plot=plot,
+               rank=input$rank,
+               riskadj = riskadj,
+               RASRplot = input$RASRplot,
+               mean.target = input$mean.target,
+               plot.target = input$plot.target,
+               ypercent = ypercent,
+               tails = c(tail.low, tail.high)
     )
   })
 })
