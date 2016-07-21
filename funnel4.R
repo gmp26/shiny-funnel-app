@@ -3,7 +3,7 @@ funnel4<-
   function(obs.prop=NA, denom=NA, pred.prop=NA, names=NA,
            plot = "funnel", rank="none", riskadj=F, RASRplot=F,
            ratedenom = NA,	mean.target = T, target = NA, plot.target=F,
-           title = "", scale = 0.7, xrange = c(	0, 1000), yrange = c(0, 1), 
+           title = "", scale = 0.5, xrange = c(	0, 1000), yrange = c(0, 1), 
            tails = c(0.001, 0.025), Npoints = 200, xlab = "", ylab = "", 
            pointsymbol=16, legend=1, ypercent=T,   bandcols=c("white","lightblue","azure"))
   {

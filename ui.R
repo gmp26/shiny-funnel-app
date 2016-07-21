@@ -67,7 +67,7 @@ ui <- shinyUI(fluidPage(
     
     # Create a spot for the barplot
     mainPanel(
-      plotOutput("funnelPlot", height = "600px"),
+      plotOutput("funnelPlot", height = "600px", width = "100%"),
       width = 8
     )
   )
