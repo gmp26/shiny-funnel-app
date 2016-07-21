@@ -3,7 +3,7 @@ funnel4<-
   function(obs.prop=NA, denom=NA, pred.prop=NA, names=NA,
            plot = "funnel", rank="none", riskadj=F, RASRplot=F,
            ratedenom = NA,	mean.target = T, target = NA, plot.target=F,
-           title = "", scale = 0.5, xrange = c(	0, 1000), yrange = c(0, 1), 
+           title = "", scale = 0.7, xrange = c(	0, 1000), yrange = c(0, 1), 
            tails = c(0.001, 0.025), Npoints = 200, xlab = "", ylab = "", 
            pointsymbol=16, legend=1, ypercent=T,   bandcols=c("white","lightblue","azure"))
   {
@@ -122,7 +122,7 @@ plot.slice=function(y, precision,names, target, plot.target,  rank, title, xrang
   
   labs=as.matrix(cbind(names))
   par(mgp = c(2, 0.75, 0))   
-  par(mar = c(3.5, trunc(max(nchar(labs[, 1]))/3) + 3, 1, 2))
+  par(mar = c(3.5, trunc(max(nchar(labs[, 1]))/2) + 3, 1, 2))
   par(adj = 0.5) # centred
   plot(yrange[1], 1, type = "n", bty="n", ylim = c(0, nunits + 1), 
        xlim = yrange, ylab = "",xlab =ylab,main=title,axes=F)
