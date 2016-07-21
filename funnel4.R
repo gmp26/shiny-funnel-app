@@ -122,7 +122,7 @@ plot.slice=function(y, precision,names, target, plot.target,  rank, title, xrang
   
   labs=as.matrix(cbind(names))
   par(mgp = c(2, 0.75, 0))   
-  par(mar = c(3.5, trunc(max(nchar(labs[, 1]))/3) + 3, 1, 2))
+  par(mar = c(3.5, trunc(max(nchar(labs[, 1]))/2) + 3, 1, 2))
   par(adj = 0.5) # centred
   plot(yrange[1], 1, type = "n", bty="n", ylim = c(0, nunits + 1), 
        xlim = yrange, ylab = "",xlab =ylab,main=title,axes=F)

@@ -82,5 +82,6 @@ server <- shinyServer(function(input, output, session) {
                ypercent = ypercent,
                tails = c(tail.low, tail.high)
     )
+
   })
 })
