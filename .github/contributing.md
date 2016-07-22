@@ -1,6 +1,6 @@
 ##How to propose a change
 
-Open an issue by clicking on `Issues` and then `New Issue`. The issue will be given a number which is useful when tracking other problems that may be caused by the same issue, and also when identifying the code change that fixed the issue. When committing a fix for (say) issue 1, write a commit message which includes the words `Fixes #1`. Github will then automatically close the issue and create hyperlinks between the commit and the closed issue.
+Open an issue by clicking on `Issues` and then `New Issue`. The issue will be given a number which is useful when tracking other associated problems, and also when identifying the code change that finally fixes it. When committing a fix for (say) issue 1, write a commit message which includes the words `Fixes #1`. Github will then automatically close the issue and create hyperlinks between the commit and the closed issue.
 
 ##How to make a change
 
