@@ -3,7 +3,6 @@
 Open an issue by clicking on `Issues` and then `New Issue`. The issue will be given a number which is useful when tracking other associated problems, and also when identifying the code change that finally fixes it. When committing a fix for (say) issue 1, write a commit message which includes the words `Fixes #1`. Github will then automatically close the issue and create hyperlinks between the commit and the closed issue.
 
 ##How to make a change
-
 Avoid editing the master branch directly as that may cause merge conflicts which have to be resolved in the terminal. Instead, make edits in a new branch and then submit that to Github as a pull request:
 * Create a new branch for the change here in github
   * Go to the project home page (https://github.com/gmp26/shiny-funnel-app), open the branch drop-down menu, and type the name of the new branch. e.g. `gmp26-patch-1` or `djs-patch-3`. Github will switch to show the newly created branch.
@@ -16,12 +15,10 @@ Avoid editing the master branch directly as that may cause merge conflicts which
   * Open a pull request on Github by clicking on `New pull request`. Provided some changes have been committed to the patch branch, a pull request will be created requesting an update to the master branch. (The base of the pull request should be `master`).
   * At this point you are done. Other collaborators will be informed of the pull request, and whoever is responsible will test it and accept it into the master branch.
 
-## Cleaning up after
-Once a pull request has been accepted or closed, the branch can be deleted on Github. and in RStudio. 
-To delete the branch in RStudio:
-```
-$ git branch -d branch-patch-name  # depending on the state of the tracked github branch you may need -D instead of -d.
-$ git checkout master # to revert to the master branch.
-```
+## Cleaning up afterwards
+* Once a pull request has been accepted or closed, delete the branch on Github.
+
+* To tidy up locally so RStudio sees the change, say `git fetch -p` in a shell. You will end up on an updated master branch, and the patch branches will have disappeared.
+
 
 
