@@ -1,5 +1,5 @@
 library("shiny")
-source(file="funnel4.R")
+source(file="R/funnel4.R")
 
 wrapfunnel <- function(datapath,
                    title="NY Cardiac Surgery", #change when adjusted
@@ -13,7 +13,7 @@ wrapfunnel <- function(datapath,
                    plot.target=F,
                    ypercent=T,
                    tails=c(0.001,0.025)) {
-  
+
   # todo: add some error handling here
   x <- read.csv(datapath,sep=",")
   N<- x$Cases
@@ -29,7 +29,7 @@ wrapfunnel <- function(datapath,
           mean.target=mean.target, plot.target=plot.target, title=title,xrange=xrange,
           yrange=yrange, tails=tails,xlab=xlabel,ylab=ylabel,ypercent=ypercent,
           bandcols=c("white","cyan","cyan3")
-  ) 
+  )
 }
 
 # Define server logic required to draw funnel plot
@@ -42,33 +42,33 @@ server <- shinyServer(function(input, output, session) {
   #  2) Its output type is a plot
   output$funnelPlot <- renderPlot({
     upload <- input$upload
-    
+
     plot <- input$plot
     riskadj <- input$riskadj
     if(plot == "funnel" && riskadj) {
       updateCheckboxInput(session, "riskadj", value = FALSE)
     }
-    
+
     title <- input$title
     if(riskadj) {
       title <- paste(title, "(adjusted)")
     }
-    
+
     ylabel <- input$ylabel
     ypercent <- input$ypercent
     if(ypercent) {
       ylabel <- paste(ylabel, "(%)")
     }
-    
+
     if (is.null(upload))
       return(NULL)
-    
+
     tail.low <- input$tail.low
     tail.high <- max(input$tail.high, tail.low)
     if(tail.high != input$tail.high) {
       updateNumericInput(session, "tail.high", value = tail.high)
     }
-    
+
     wrapfunnel(datapath=upload$datapath,
                title=title,
                xlabel=input$xlabel,
