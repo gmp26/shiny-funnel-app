@@ -8,17 +8,12 @@ Avoid editing the master branch directly as that may cause merge conflicts which
 * Create a new branch for the change here in github
   * Go to the project home page (https://github.com/gmp26/shiny-funnel-app), open the branch drop-down menu, and type the name of the new branch. e.g. `gmp26-patch-1` or `djs-patch-3`. Github will switch to show the newly created branch.
   * In RStudio, choose `Tools > Version Control > Pull Branches`. Once pulled, the new branch will appear in the Git panel `master` drop down list. Unfortunately, you need to use a shell to checkout the new branch - RStudio does not have a command to do this.
-  * In RStudio, choose `Tools > shell` and checkout the new branch:
-  ```
-  $ git checkout gmp26-patch-1
-  ```
-  Git will say something like:
-  ```
-  Branch gmp26-patch-1 set up to track remote branch gmp26-patch-1 from origin.
-  Switched to a new branch 'gmp26-patch-1'
-  ```
-  the RStudio Git panel will switch branch to the new branch too.
-  
-  
-* All edits you make in RStudio should now be committed to the new branch
+  * In RStudio, choose `Tools > shell` and checkout the new branch - `$ git checkout gmp26-patch-1`. All edits you make now in RStudio affect the new branch only.
+  * As you make changes, the Git panel will list them for each file. Use the Diff tab to see changes in a selected file.
+  * Tick `Staged`, and then `Commit` for any changes you want to commit. It's a good idea to commit whenever you are in a state you may want to revisit later - even if there are more changes to come. No need to Push changes to GitHub until you have something ready to go into the master branch.
+* Push changes to Github, and create a Pull Request.
+  * Click `Push` in the Git panel. Changes will make their way upstream to the tracked patch branch there.
+  * Open a pull request on Github by clicking on `New pull request`. Provided some changes have been committed to the patch branch, a pull request will be created requesting an update to the master branch. (The base of the pull request should be `master`).
+  * At this point you are done. Other collaborators will be informed of the pull request, and whoever is responsible will test it and accept it into the master branch.
+
 
