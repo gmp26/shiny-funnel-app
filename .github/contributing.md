@@ -16,4 +16,15 @@ Avoid editing the master branch directly as that may cause merge conflicts which
   * Open a pull request on Github by clicking on `New pull request`. Provided some changes have been committed to the patch branch, a pull request will be created requesting an update to the master branch. (The base of the pull request should be `master`).
   * At this point you are done. Other collaborators will be informed of the pull request, and whoever is responsible will test it and accept it into the master branch.
 
+## Cleaning up after
+Once a pull request has been accepted or closed, the branch can be deleted on Github. and in RStudio. 
+To delete the branch in RStudio:
+```
+$ git branch -d branch-patch-name  # depending on the state of the tracked github branch you may need -D instead of -d.
+$ git checkout master # to revert to the master branch.
+```
+
+```
+
+Test and accept or not as necessary. When done, 
 
