@@ -24,7 +24,4 @@ $ git branch -d branch-patch-name  # depending on the state of the tracked githu
 $ git checkout master # to revert to the master branch.
 ```
 
-```
-
-Test and accept or not as necessary. When done, 
 
