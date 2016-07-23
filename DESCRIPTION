@@ -1,10 +1,14 @@
 Package: funnel
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Funnel Plot
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: David Spiegelhalter & Mike Pearson
+Maintainer: <gmp26@cam.ac.uk>
+Description: A package that generates funnel and slice plots from CSV data.
+License: MIT + file LICENSE
 LazyData: TRUE
-Suggests: testthat
+Imports:
+    shiny
+Suggests:
+    testthat
+RoxygenNote: 5.0.1

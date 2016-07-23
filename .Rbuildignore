@@ -1,2 +1,5 @@
 ^.*\.Rproj$
+^Rplots\.pdf$
+^fixtures$
+^contributing\.md$
 ^\.Rproj\.user$
