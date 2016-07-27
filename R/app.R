@@ -368,7 +368,8 @@ winsorise<-function(Z,winsor){
 #
 # user interface:
 #
-ui <- fluidPage(
+#' @import "shiny"
+ui <- shiny::fluidPage(
   titlePanel("Funnel Plot Inputs"),
 
   sidebarLayout(

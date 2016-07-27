@@ -1,6 +1,4 @@
 context("CSV uploads")
-cwd <- getwd()
-setwd("~/rstudio/funnel")
 
 #
 # Testing how the funnels package behaves with various CSV uploads. See fixtures.
