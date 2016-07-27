@@ -528,4 +528,7 @@ server <- function(input, output, session) {
 
 
 ######################
-shiny::shinyApp(ui = ui, server = server)
+#' @export
+run_app <- function() {
+  shiny::shinyApp(ui = ui, server = server)
+}
