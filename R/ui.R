@@ -3,7 +3,7 @@ library("shiny")
 #
 # user interface:
 #
-ui <- shinyUI(fluidPage(
+ui <- fluidPage(
   titlePanel("Funnel Plot Inputs"),
 
   sidebarLayout(
@@ -71,6 +71,6 @@ ui <- shinyUI(fluidPage(
       width = 8
     )
   )
-))
+)
 
 

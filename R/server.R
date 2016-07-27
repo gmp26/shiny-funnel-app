@@ -1,5 +1,5 @@
 library("shiny")
-
+source("funnel4.R")
 # read csv file and provide defaults for core funnel plotter
 wrapfunnel <- function(datapath,
                    title="NY Cardiac Surgery", #change when adjusted
@@ -36,7 +36,7 @@ wrapfunnel <- function(datapath,
 #'@importFrom shiny renderPlot
 #'@importFrom shiny updateCheckboxInput
 #'@importFrom shiny updateNumericInput
-server <- shinyServer(function(input, output, session) {
+server <- function(input, output, session) {
   # Expression that generates a funnel. The expression is
   # wrapped in a call to renderPlot to indicate that:
   #
@@ -87,4 +87,4 @@ server <- shinyServer(function(input, output, session) {
     )
 
   })
-})
+}
