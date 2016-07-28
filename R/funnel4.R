@@ -5,6 +5,7 @@
 #' @importFrom "graphics" "axis" "par" "plot" "points" "polygon"
 #' @import "stats"
 #' @importFrom "utils" "read.csv"
+#' @export
 #####
 funnel4 <-
   function(obs.prop=NA, denom=NA, pred.prop=NA, names=NA,
