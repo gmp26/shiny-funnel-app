@@ -8,24 +8,24 @@
 #' @export
 #' @param obs.prop A data frame of mortality observations from a number of hospitals.
 #' @param denom Number of cases
-#' @param pred.prop
-#' @param names
-#' @param plot
-#' @param rank
-#' @param riskadj
-#' @param RASRplot
-#' @param ratedenom
-#' @param mean.target
-#' @param target
-#' @param plot.target
-#' @param title
-#' @param scale
-#' @param xrange
-#' @param yrange
-#' @param pointsymbol
-#' @param legend
-#' @param ypercent
-#' @param bandcols
+#' @param pred.prop Predicted survival proportion
+#' @param names Names of hospitals
+#' @param plot The plot type
+#' @param rank The plot order - by "precision" or alphabetically by "name"
+#' @param riskadj Make a risk adjusted plot if TRUE
+#' @param RASRplot Use risk adjusted mortality if TRUE
+#' @param ratedenom Unused
+#' @param mean.target Calculate target from mean
+#' @param target Given target
+#' @param plot.target Plot target if TRUE
+#' @param title The plot target
+#' @param scale Axis scale
+#' @param xrange x axis range
+#' @param yrange y axis range
+#' @param pointsymbol NUmeric code identifying the plot symbol
+#' @param legend Use legend if TRUE
+#' @param ypercent Show survival as percentage if true
+#' @param bandcols Vector of colours used in bars
 #####
 funnel4 <-
   function(obs.prop=NA, denom=NA, pred.prop=NA, names=NA,
@@ -206,7 +206,6 @@ plot.slice=function(y, precision,names, target, plot.target,  rank, title, xrang
 
   # put in dots
   points(y[ord], nunits:1 ,  pch = pointsymbol)
-
 
 }
 

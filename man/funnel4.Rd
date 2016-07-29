@@ -16,6 +16,42 @@ funnel4(obs.prop = NA, denom = NA, pred.prop = NA, names = NA,
 \item{obs.prop}{A data frame of mortality observations from a number of hospitals.}
 
 \item{denom}{Number of cases}
+
+\item{pred.prop}{Predicted survival proportion}
+
+\item{names}{Names of hospitals}
+
+\item{plot}{The plot type}
+
+\item{rank}{The plot order - by "precision" or alphabetically by "name"}
+
+\item{riskadj}{Make a risk adjusted plot if TRUE}
+
+\item{RASRplot}{Use risk adjusted mortality if TRUE}
+
+\item{ratedenom}{Unused}
+
+\item{mean.target}{Calculate target from mean}
+
+\item{target}{Given target}
+
+\item{plot.target}{Plot target if TRUE}
+
+\item{title}{The plot target}
+
+\item{scale}{Axis scale}
+
+\item{xrange}{x axis range}
+
+\item{yrange}{y axis range}
+
+\item{pointsymbol}{NUmeric code identifying the plot symbol}
+
+\item{legend}{Use legend if TRUE}
+
+\item{ypercent}{Show survival as percentage if true}
+
+\item{bandcols}{Vector of colours used in bars}
 }
 \description{
 Core funnel and slice plot generator
