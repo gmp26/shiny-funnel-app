@@ -1,11 +1,31 @@
 # February 2016. New funnel program
 
 #####
-# Core funnel and slice plot generator
+#' Core funnel and slice plot generator
 #' @importFrom "graphics" "axis" "par" "plot" "points" "polygon"
 #' @import "stats"
 #' @importFrom "utils" "read.csv"
 #' @export
+#' @param obs.prop A data frame of mortality observations from a number of hospitals.
+#' @param denom Number of cases
+#' @param pred.prop
+#' @param names
+#' @param plot
+#' @param rank
+#' @param riskadj
+#' @param RASRplot
+#' @param ratedenom
+#' @param mean.target
+#' @param target
+#' @param plot.target
+#' @param title
+#' @param scale
+#' @param xrange
+#' @param yrange
+#' @param pointsymbol
+#' @param legend
+#' @param ypercent
+#' @param bandcols
 #####
 funnel4 <-
   function(obs.prop=NA, denom=NA, pred.prop=NA, names=NA,
