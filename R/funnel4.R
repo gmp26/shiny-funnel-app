@@ -13,7 +13,7 @@
 #' @param plot The plot type
 #' @param rank The plot order - by "precision" or alphabetically by "name"
 #' @param riskadj Make a risk adjusted plot if TRUE
-#' @param RASRplot Use risk adjusted mortality if TRUE
+#' @param RASRplot Work with risk adjusted mortality data if TRUE, else raw mortality rates
 #' @param ratedenom Unused
 #' @param mean.target Calculate target from mean
 #' @param target Given target

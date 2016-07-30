@@ -1,9 +1,9 @@
 ###################### server.R
 # read csv file and provide defaults for core funnel plotter
 wrapfunnel <- function(datapath,
-                       title="NY Cardiac Surgery", #change when adjusted
+                       title="NY Cardiac Surgery",
                        plot="funnel",
-                       xlabel="Number of operations per hospital", #change when adjusted
+                       xlabel="Number of operations per hospital",
                        ylabel="Survival rate (%)",
                        rank="precision",
                        riskadj=F,
@@ -81,6 +81,5 @@ server <- function(input, output, session) {
                ypercent = ypercent,
                tails = c(tail.low, tail.high)
     )
-
   })
 }
