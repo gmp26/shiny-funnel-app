@@ -16,15 +16,19 @@
 #' @param RASRplot Work with risk adjusted mortality data if TRUE, else raw mortality rates
 #' @param ratedenom Unused
 #' @param mean.target Calculate target from mean
-#' @param target Given target
+#' @param target Given target (?)
 #' @param plot.target Plot target if TRUE
 #' @param title The plot target
 #' @param scale Axis scale
 #' @param xrange x axis range
 #' @param yrange y axis range
+#' @param xlab x axis label (?)
+#' @param ylab y axis label (?)
 #' @param pointsymbol NUmeric code identifying the plot symbol
 #' @param legend Use legend if TRUE
 #' @param ypercent Show survival as percentage if true
+#' @param tails A pair of p-values determining the inner and outer confidence limits (?)
+#' @param Npoints The number of bernouilli trials used in an integer binomial approximation (?)
 #' @param bandcols Vector of colours used in bars
 #####
 funnel4 <-

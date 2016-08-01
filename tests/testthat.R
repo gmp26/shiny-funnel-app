@@ -1,4 +1,4 @@
 library(testthat)
-library(funnel)
+library(rcljsdemo)
 
-test_check("funnel")
+test_check("rcljsdemo")

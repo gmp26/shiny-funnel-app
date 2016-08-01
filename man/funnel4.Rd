@@ -33,7 +33,7 @@ funnel4(obs.prop = NA, denom = NA, pred.prop = NA, names = NA,
 
 \item{mean.target}{Calculate target from mean}
 
-\item{target}{Given target}
+\item{target}{Given target (?)}
 
 \item{plot.target}{Plot target if TRUE}
 
@@ -44,6 +44,14 @@ funnel4(obs.prop = NA, denom = NA, pred.prop = NA, names = NA,
 \item{xrange}{x axis range}
 
 \item{yrange}{y axis range}
+
+\item{tails}{A pair of p-values determining the inner and outer confidence limits (?)}
+
+\item{Npoints}{The number of bernouilli trials used in an integer binomial approximation (?)}
+
+\item{xlab}{x axis label (?)}
+
+\item{ylab}{y axis label (?)}
 
 \item{pointsymbol}{NUmeric code identifying the plot symbol}
 

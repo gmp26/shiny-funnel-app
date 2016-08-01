@@ -23,7 +23,7 @@ wrapfunnel <- function(datapath,
   names= as.character(x$Hospital)
 
   # test using slices
-  funnel4(obs.prop=R/N,  denom=N, pred.prop=P/N, names=names,
+  funnel::funnel4(obs.prop=R/N,  denom=N, pred.prop=P/N, names=names,
           plot=plot, rank=rank, riskadj=riskadj, RASRplot=RASRplot,
           mean.target=mean.target, plot.target=plot.target, title=title,xrange=xrange,
           yrange=yrange, tails=tails,xlab=xlabel,ylab=ylabel,ypercent=ypercent,
