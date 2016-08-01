@@ -8,7 +8,10 @@ Description: A package that generates funnel and slice plots from CSV data.
 License: MIT + file LICENSE
 LazyData: TRUE
 Imports:
-    shiny
+    shiny,
+    funnel
+Remotes: 
+    gmp26/funnel
 Suggests:
     testthat
 RoxygenNote: 5.0.1
