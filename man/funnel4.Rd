@@ -27,7 +27,7 @@ funnel4(obs.prop = NA, denom = NA, pred.prop = NA, names = NA,
 
 \item{riskadj}{Make a risk adjusted plot if TRUE}
 
-\item{RASRplot}{Use risk adjusted mortality if TRUE}
+\item{RASRplot}{Work with risk adjusted mortality data if TRUE, else raw mortality rates}
 
 \item{ratedenom}{Unused}
 
