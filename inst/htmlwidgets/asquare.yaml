@@ -1,0 +1,8 @@
+dependencies:
+  - name: asquare
+    version: 0.0.1
+    src: htmlwidgets/lib
+    script:
+      - asquare.js
+#    stylesheet:
+
