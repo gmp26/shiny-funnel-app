@@ -3,6 +3,6 @@ dependencies:
     version: 0.0.1
     src: htmlwidgets/lib #/Users/gmp26/clojure/rcljs-widgets/resources/public/js/compiled
     script:
-      - rcljs_widgets3.js
+      - rcljs_widgets.js
 #    stylesheet:
 
