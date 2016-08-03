@@ -14,7 +14,8 @@ HTMLWidgets.widget({
 
         // TODO: code to render the widget, e.g.
         // el.innerText = x.message;
-        window.mountComponent(el, x.fill);
+        // mountComponent(el, x.fill);
+        cljsWidgets.filled_square(el, x.fill);
         console.log("x");
         console.log(x);
       },

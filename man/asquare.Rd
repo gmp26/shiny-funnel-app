@@ -4,7 +4,7 @@
 \alias{asquare}
 \title{asquare}
 \usage{
-asquare(message, width = NULL, height = NULL)
+asquare(rgb_string, width = NULL, height = NULL)
 }
 \description{
 Draws a 100px x 100px square in a given colour
