@@ -1,7 +1,7 @@
 dependencies:
   - name: asquare
     version: 0.0.1
-    src: htmlwidgets/lib
+    src: ~/clojure/rcljs-widgets/resources/public/js/compiled
     script:
       - rcljs_widgets.js
 #    stylesheet:

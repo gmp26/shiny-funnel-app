@@ -60,8 +60,6 @@ ui <- shiny::fluidPage(
                numericInput("tail.high", "high tail", 0.025, min = 0, max = 1, step = 0.001))
       ),
 
-
-
       width = 4),
 
     # Create a spot for the barplot
