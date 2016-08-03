@@ -3,6 +3,6 @@ dependencies:
     version: 0.0.1
     src: htmlwidgets/lib
     script:
-      - asquare.js
+      - rcljs_widgets.js
 #    stylesheet:
 
