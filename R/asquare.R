@@ -5,11 +5,11 @@
 #' @import htmlwidgets
 #'
 #' @export
-asquare <- function(message, width = NULL, height = NULL) {
+asquare <- function(rgb_string, width = NULL, height = NULL) {
 
   # forward options using x
   x = list(
-    message = message
+    fill = rgb_string
   )
 
   # create widget

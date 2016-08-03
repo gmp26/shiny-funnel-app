@@ -14,8 +14,9 @@ HTMLWidgets.widget({
 
         // TODO: code to render the widget, e.g.
         // el.innerText = x.message;
-        window.mountComponent(el);
-        console.log("called mountComponent");
+        window.mountComponent(el, x.fill);
+        console.log("x");
+        console.log(x);
       },
 
       resize: function(width, height) {
