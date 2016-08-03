@@ -1,0 +1,8 @@
+dependencies:
+  - name: fsquare
+    version: 0.0.1
+    src: htmlwidgets/lib
+    script:
+      - rcljs_widgets4.js
+#    stylesheet:
+
