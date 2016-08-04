@@ -1,20 +1,20 @@
-#' asquare
+#' cljs_rect
 #'
-#' Draws a 100px x 100px square in a given colour
+#' Draws a filled cljs_rectangle
 #'
 #' @import htmlwidgets
 #'
 #' @export
-asquare <- function(rgb_string, width = NULL, height = NULL) {
+cljs_rect <- function(fill = "#fa0", width = NULL, height = NULL) {
 
   # forward options using x
   x = list(
-    fill = rgb_string
+    fill = fill
   )
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'asquare',
+    name = 'cljs_rect',
     x,
     width = width,
     height = height,
@@ -22,31 +22,31 @@ asquare <- function(rgb_string, width = NULL, height = NULL) {
   )
 }
 
-#' Shiny bindings for asquare
+#' Shiny bindings for cljs_rect
 #'
-#' Output and render functions for using asquare within Shiny
+#' Output and render functions for using cljs_rect within Shiny
 #' applications and interactive Rmd documents.
 #'
 #' @param outputId output variable to read from
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
-#' @param expr An expression that generates a asquare
+#' @param expr An expression that generates a cljs_rect
 #' @param env The environment in which to evaluate \code{expr}.
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
 #'
-#' @name asquare-shiny
+#' @name cljs_rect-shiny
 #'
 #' @export
-asquareOutput <- function(outputId, width = '120px', height = '120px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'asquare', width, height, package = 'rcljsdemo')
+cljs_rectOutput <- function(outputId, width = '120px', height = '120px'){
+  htmlwidgets::shinyWidgetOutput(outputId, 'cljs_rect', width, height, package = 'rcljsdemo')
 }
 
-#' @rdname asquare-shiny
+#' @rdname cljs_rect-shiny
 #' @export
-renderAsquare <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderCljs_rect <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, asquareOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, cljs_rectOutput, env, quoted = TRUE)
 }
 

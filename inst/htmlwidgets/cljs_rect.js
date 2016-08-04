@@ -1,6 +1,6 @@
 HTMLWidgets.widget({
 
-  name: 'asquare',
+  name: 'cljs_rect',
 
   type: 'output',
 
@@ -16,7 +16,7 @@ HTMLWidgets.widget({
 
         // TODO: code to render the widget, e.g.
         fill = x.fill;
-        cljsWidgets.filled_square.render(el, x.fill);
+        cljsWidgets.filled_rectangle.render(el, x.fill);
         console.log("x");
         console.log(x);
       },
@@ -25,7 +25,7 @@ HTMLWidgets.widget({
 
         // TODO: code to re-render the widget with a new size
         console.log("width = ", width, " height = ", height);
-        cljsWidgets.filled_square.resize(node, fill, width, height);
+        cljsWidgets.filled_rectangle.resize(node, fill, width, height);
       }
 
     };
