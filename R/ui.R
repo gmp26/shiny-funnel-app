@@ -3,7 +3,7 @@
 #
 #' @import "shiny"
 ui <- shiny::fluidPage(
-  titlePanel("Funnel Plot Inputs"),
+  titlePanel("Funnel or Slice Plot"),
 
   sidebarLayout(
     sidebarPanel(
