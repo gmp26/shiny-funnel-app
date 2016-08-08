@@ -1,0 +1,20 @@
+Package: shinyfunnelapp
+Type: Package
+Title: Funnel Plot
+Version: 0.1.0
+Author: David Spiegelhalter & Mike Pearson
+Maintainer: <gmp26@cam.ac.uk>
+Description: A package that generates funnel and slice plots from CSV data.
+License: MIT + file LICENSE
+LazyData: TRUE
+Imports:
+    shiny,
+    funnel
+Remotes:
+    gmp26/funnel
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr
