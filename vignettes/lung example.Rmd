@@ -9,7 +9,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-# Write me - 
+# Write me -
 ## Cover the lung data example currently in funnel-test.R
 
 See [Vignette writing guide here](http://r-pkgs.had.co.nz/vignettes.html)
@@ -30,13 +30,13 @@ Note the various macros within the `vignette` section of the metadata block abov
 
 The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
 
-    output: 
+    output:
       rmarkdown::html_vignette:
         css: mystyles.css
 
 ## Figures
 
-The figure sizes have been customised so that you can easily put two images side-by-side. 
+The figure sizes have been customised so that you can easily put two images side-by-side.
 
 ```{r, fig.show='hold'}
 plot(1:10)
@@ -65,7 +65,7 @@ devtools::install_github('gmp26/funnel')
 library(funnel)
 
 ###
-# NB from Mike. It's probably better to put the lung.csv file in the data 
+# NB from Mike. It's probably better to put the lung.csv file in the data
 # directory in this package rather than use a private dropbox.
 ###
 
@@ -73,7 +73,7 @@ library(funnel)
 # Using CABG data since I can't access lung-data
 #
 load("../data/cabg.rda") # if necessary to access cabg data
-x <- cabg # cabg was created by reading CABG-hospitals-03.csv into 
+x <- cabg # cabg was created by reading CABG-hospitals-03.csv into
 # cabg variable and then saving it with `devtools::use_data(cabg)`
 
 # x<-read.csv(file="~//Dropbox//DB-funnels-HSMR//funnels//lung.csv",header=T,sep=",")
@@ -100,8 +100,8 @@ funnel4(obs.prop=R/N,  denom=N, pred.prop=P/N, names=names,
         bandcols=c("white","lightcyan","cyan")
 )
 
-# Abobe code fails with:
-# Error in par(mar = c(3.5, trunc(max(nchar(labs[, 1]))/2) + 3, 1, 2)) : 
+# Above code fails with:
+# Error in par(mar = c(3.5, trunc(max(nchar(labs[, 1]))/2) + 3, 1, 2)) :
 #  invalid value specified for graphical parameter "mar"
 # In addition: Warning message:
 # In max(nchar(labs[, 1])) : no non-missing arguments to max; returning -Inf
