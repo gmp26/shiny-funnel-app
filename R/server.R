@@ -1,36 +1,4 @@
 ###################### server.R
-# read csv file and provide defaults for core funnel plotter
-#' @import "utils"
-wrapfunnel <- function(datapath,
-                       title="NY Cardiac Surgery",
-                       plot="funnel",
-                       xlabel="Number of operations per hospital",
-                       ylabel="Survival rate (%)",
-                       rank="precision",
-                       riskadj=F,
-                       RASRplot=F,
-                       mean.target=F,
-                       plot.target=F,
-                       ypercent=T,
-                       tails=c(0.001,0.025)) {
-
-  # todo: add some error handling here
-  x <- read.csv(datapath,sep=",")
-  N<- x$Cases
-  R<- N-x$Deaths
-  P = N -x$EMR*N/100
-  xrange<-c(0,max(N))
-  yrange<-c(min(R/N )-0.01, 1)
-  names= as.character(x$Hospital)
-
-  # test using slices
-  funnel::funnel4(obs.prop=R/N,  denom=N, pred.prop=P/N, names=names,
-          plot=plot, rank=rank, riskadj=riskadj, RASRplot=RASRplot,
-          mean.target=mean.target, plot.target=plot.target, title=title,xrange=xrange,
-          yrange=yrange, tails=tails,xlab=xlabel,ylab=ylabel,ypercent=ypercent,
-          bandcols=c("white","cyan","cyan3")
-  )
-}
 
 # Define server logic required to draw funnel plot
 server <- function(input, output, session) {
@@ -68,19 +36,21 @@ server <- function(input, output, session) {
     if(tail.high != input$tail.high) {
       updateNumericInput(session, "tail.high", value = tail.high)
     }
-
-    wrapfunnel(datapath=upload$datapath,
-               title=title,
-               xlabel=input$xlabel,
-               ylabel=ylabel,
-               plot=plot,
-               rank=input$rank,
-               riskadj = riskadj,
-               RASRplot = input$RASRplot,
-               mean.target = input$mean.target,
-               plot.target = input$plot.target,
-               ypercent = ypercent,
-               tails = c(tail.low, tail.high)
+    
+    x <- read.csv(upload$datapath,sep=",")
+    funnel::funnelslice(x,
+                        plot_title=title,
+                        xlabel=input$xlabel,
+                        ylabel=ylabel,
+                        plot=plot,
+                        rank=input$rank,
+                        riskadj = riskadj,
+                        RASRplot = input$RASRplot,
+                        mean.target = input$mean.target,
+                        plot.target = input$plot.target,
+                        ypercent = ypercent,
+                        tails = c(tail.low, tail.high)
     )
+
   })
 }
