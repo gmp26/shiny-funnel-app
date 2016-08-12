@@ -5,6 +5,8 @@ Version: 0.1.0
 Author: David Spiegelhalter & Mike Pearson
 Maintainer: <gmp26@cam.ac.uk>
 Description: A package that generates funnel and slice plots from CSV data.
+Depends:
+    R (>= 2.10)
 License: MIT + file LICENSE
 LazyData: TRUE
 Imports:

@@ -2,4 +2,3 @@
 
 export(demo1)
 import("shiny")
-import("utils")
