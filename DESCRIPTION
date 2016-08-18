@@ -13,7 +13,8 @@ Imports:
     shiny,
     funnel
 Remotes:
-    gmp26/funnel
+    gmp26/funnel,
+    hadley/tanglekit
 Suggests:
     testthat,
     knitr,

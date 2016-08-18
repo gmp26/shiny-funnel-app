@@ -7,6 +7,11 @@ ui <- shiny::fluidPage(
 
   sidebarLayout(
     sidebarPanel(
+      
+      # tag$div("Hello"),
+      
+      # tanglekit::tk_drag(1, " pies"),
+      
       fileInput("upload", "Upload a CSV file",
                 multiple = FALSE,
                 accept=c('text/csv',
